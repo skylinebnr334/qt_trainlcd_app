@@ -3,6 +3,7 @@
 
 #include <QMainWindow>
 #include <QMessageBox>
+#include "led_subwindow.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui {
@@ -20,5 +21,7 @@ public:
 
 private:
     Ui::MainWindow *ui;
+    Led_SubWindow *subwindow;
+
 };
 #endif // MAINWINDOW_H

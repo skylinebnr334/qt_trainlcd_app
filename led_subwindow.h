@@ -17,6 +17,9 @@ public:
 
 private:
     Ui::Led_SubWindow *ui;
+public slots:
+    void setMainwindow_label_info(QString val);
+
 };
 
 #endif // LED_SUBWINDOW_H

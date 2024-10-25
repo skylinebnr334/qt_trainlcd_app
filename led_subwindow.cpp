@@ -7,6 +7,9 @@ Led_SubWindow::Led_SubWindow(QWidget *parent)
 {
     ui->setupUi(this);
 }
+void Led_SubWindow::setMainwindow_label_info(QString val){
+    ui->mainwindow_label_info->setText(val);
+}
 
 Led_SubWindow::~Led_SubWindow()
 {
