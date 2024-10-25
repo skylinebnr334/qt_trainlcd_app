@@ -15,6 +15,9 @@ MainWindow::MainWindow(QWidget *parent)
         msgBox.exec();
 
     });
+    QObject::connect(ui->pushButton2,&QPushButton::clicked,[&](){
+        subwindow->setMainwindow_label_info(QDateTime::currentDateTime().time().toString("HH:mm:ss"));
+    });
     subwindow->show();
 }
 

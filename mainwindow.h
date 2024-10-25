@@ -3,6 +3,7 @@
 
 #include <QMainWindow>
 #include <QMessageBox>
+#include <QDateTime>
 #include "led_subwindow.h"
 
 QT_BEGIN_NAMESPACE
