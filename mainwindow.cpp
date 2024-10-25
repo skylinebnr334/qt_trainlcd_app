@@ -7,8 +7,6 @@ MainWindow::MainWindow(QWidget *parent)
 {
     ui->setupUi(this);
     subwindow=new Led_SubWindow(this);
-
-
     QObject::connect(ui->pushButton1,&QPushButton::clicked,[&](){
         QMessageBox msgBox(this);
         msgBox.setText("aaaaa");
