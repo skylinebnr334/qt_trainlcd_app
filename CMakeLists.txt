@@ -23,6 +23,7 @@ if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
     qt_add_executable(qt_trainlcd_app
         MANUAL_FINALIZATION
         ${PROJECT_SOURCES}
+        led_subwindow.h led_subwindow.cpp led_subwindow.ui
     )
 # Define target properties for Android with Qt 6 as:
 #    set_property(TARGET qt_trainlcd_app APPEND PROPERTY QT_ANDROID_PACKAGE_SOURCE_DIR
