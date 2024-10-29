@@ -4,6 +4,3 @@ Led_SubWindow_QuickWidget::Led_SubWindow_QuickWidget(QWidget *parent):QQuickWidg
 
     this->setSource(QUrl("qrc:/led_subwindow_quick.qml"));
 }
-Led_SubWindow_QuickWidget::~Led_SubWindow_QuickWidget(){
-
-}
