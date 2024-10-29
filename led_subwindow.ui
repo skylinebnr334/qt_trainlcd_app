@@ -40,6 +40,16 @@
      <string>TextLabel</string>
     </property>
    </widget>
+   <widget class="Led_SubWindow_QuickWidget" name="led_subwindow_qtquickwidg" native="true">
+    <property name="geometry">
+     <rect>
+      <x>200</x>
+      <y>80</y>
+      <width>311</width>
+      <height>151</height>
+     </rect>
+    </property>
+   </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">
@@ -53,6 +63,14 @@
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
  </widget>
+ <customwidgets>
+  <customwidget>
+   <class>Led_SubWindow_QuickWidget</class>
+   <extends>QWidget</extends>
+   <header>led_subwindow_quickwidget.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
  <resources/>
  <connections/>
 </ui>

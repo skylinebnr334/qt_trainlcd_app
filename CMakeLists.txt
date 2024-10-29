@@ -17,16 +17,21 @@ set(PROJECT_SOURCES
         mainwindow.cpp
         mainwindow.h
         mainwindow.ui
+        led_subwindow.h
+        led_subwindow.cpp
+        led_subwindow.ui
+        led_subwindow_quickwidget.h
+        led_subwindow_quickwidget.cpp
+
 )
+include_directories("${CMAKE_SOURCE_DIR}")
 
 QT6_ADD_RESOURCES(RESOURCES main.qrc)
 if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
     qt_add_executable(qt_trainlcd_app
         MANUAL_FINALIZATION
         ${PROJECT_SOURCES}
-        led_subwindow.h led_subwindow.cpp led_subwindow.ui
         ${RESOURCES}
-        led_subwindow_quickwidget.h led_subwindow_quickwidget.cpp
     )
 # Define target properties for Android with Qt 6 as:
 #    set_property(TARGET qt_trainlcd_app APPEND PROPERTY QT_ANDROID_PACKAGE_SOURCE_DIR
@@ -46,7 +51,7 @@ else()
     endif()
 endif()
 
-target_link_libraries(qt_trainlcd_app PRIVATE Qt${QT_VERSION_MAJOR}::Widgets Qt${QT_VERSION_MAJOR}::Quick Qt${QT_VERSION_MAJOR}::Qml Qt${QT_VERSION_MAJOR}::Gui)
+target_link_libraries(qt_trainlcd_app PRIVATE Qt${QT_VERSION_MAJOR}::Widgets Qt${QT_VERSION_MAJOR}::Quick Qt${QT_VERSION_MAJOR}::Qml Qt${QT_VERSION_MAJOR}::Gui Qt${QT_VERSION_MAJOR}::QuickWidgets)
 
 # Qt for iOS sets MACOSX_BUNDLE_GUI_IDENTIFIER automatically since Qt 6.1.
 # If you are developing for iOS or macOS you should consider setting an
