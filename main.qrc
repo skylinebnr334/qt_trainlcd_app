@@ -1,0 +1,5 @@
+<RCC>
+    <qresource prefix="/">
+        <file>led_subwindow_quick.qml</file>
+    </qresource>
+</RCC>

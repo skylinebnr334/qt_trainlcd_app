@@ -9,8 +9,8 @@ set(CMAKE_AUTORCC ON)
 set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
-find_package(QT NAMES Qt6 Qt5 REQUIRED COMPONENTS Widgets Quick Gui Qml)
-find_package(Qt${QT_VERSION_MAJOR} REQUIRED COMPONENTS Widgets Quick Gui Qml)
+find_package(QT NAMES Qt6 Qt5 REQUIRED COMPONENTS Widgets Quick Gui Qml QuickWidgets)
+find_package(Qt${QT_VERSION_MAJOR} REQUIRED COMPONENTS Widgets Quick Gui Qml QuickWidgets)
 
 set(PROJECT_SOURCES
         main.cpp
@@ -19,12 +19,14 @@ set(PROJECT_SOURCES
         mainwindow.ui
 )
 
+QT6_ADD_RESOURCES(RESOURCES main.qrc)
 if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
     qt_add_executable(qt_trainlcd_app
         MANUAL_FINALIZATION
         ${PROJECT_SOURCES}
         led_subwindow.h led_subwindow.cpp led_subwindow.ui
-        led_subwindow_quick.qml
+        ${RESOURCES}
+        led_subwindow_quickwidget.h led_subwindow_quickwidget.cpp
     )
 # Define target properties for Android with Qt 6 as:
 #    set_property(TARGET qt_trainlcd_app APPEND PROPERTY QT_ANDROID_PACKAGE_SOURCE_DIR

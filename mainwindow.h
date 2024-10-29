@@ -5,6 +5,8 @@
 #include <QMessageBox>
 #include <QDateTime>
 #include "led_subwindow.h"
+#include <QQmlApplicationEngine>
+
 
 QT_BEGIN_NAMESPACE
 namespace Ui {
